@@ -1,0 +1,15 @@
+.search-header {
+    text-align: center;
+
+}
+
+.search-box {
+    width: fit-content;
+    margin: auto;
+}
+
+.form-control:focus {
+    /* border-color: #fca311 !important; */
+    box-shadow: 0 0 0 0.2rem #fca311 !important;
+    
+}

@@ -1,0 +1,13 @@
+.nav {
+    background-color: #FFFFFF;
+    padding: 5px;
+}
+
+.nav-link {
+    font-size: 20px !important;
+    color: #e5e5e5 !important;
+}
+
+.active {
+    color: #14213d !important;
+}
