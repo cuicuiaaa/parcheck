@@ -10,6 +10,7 @@ import { List } from "../components/List";
 import "./pages.css";
 
 function Streets(props) {
+  console.log(props);
   // Setting our component's initial state
   const [streets, setStreets] = useState([]);
   const [search, setSearch] = useState("");
@@ -21,7 +22,7 @@ function Streets(props) {
 
   
   function loadStreets() {
-    console.log(props);
+    
     API.getStreets()
       .then(res => 
         setStreets(res.data)

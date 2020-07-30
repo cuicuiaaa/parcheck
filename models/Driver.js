@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+const time = new Date().getTime();
+
 const driverSchema = new Schema({
     
     email: {
@@ -17,6 +19,13 @@ const driverSchema = new Schema({
       type: String,
       trim: true,
       required: true
+    },
+    startTime: {
+      type: Number,
+      default: time
+    },
+    endTime: {
+      type: Number
     }
     
 });

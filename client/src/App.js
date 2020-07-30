@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { GoogleLogin } from "react-google-login";
 import { GoogleLogout } from "react-google-login";
-import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import { history } from "./history";
 import Streets from "./pages/Streets";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
@@ -9,18 +11,22 @@ import Nav from "./components/Nav";
 import API from "./utils/API";
 import "./App.css";
 
-function App() {
+function App(props) {
+  
+
   const [loggedInDriver, setLoggedInDriver] = useState({}); 
   const [isLoggedin, setLoggedin] = useState(false);
 
+  // const [test, setTest] = useState();
+  
   useEffect(() => {
-
-    console.log(loggedInDriver);
-    
+    // setTest("usaihi");
   }, [loggedInDriver])
 
-  const login = (response) => {
-    console.log(response);
+  // const x = 5;
+
+  function login(response) {
+    
     console.log("Logged In!");
     API.createDriver({
       "email": response.profileObj.email,
@@ -28,9 +34,10 @@ function App() {
       "name": response.profileObj.name
     })
     .then(res => {
-      console.log(res.data._id);
+      
       const {data} = res;
-  
+
+      
       setLoggedInDriver({
         _id: data._id,
         email: data.email,
@@ -41,7 +48,7 @@ function App() {
     
     })
       // .then(() => window.location.href = '/streets')
-      .then(() => {setLoggedin(true); console.log(loggedInDriver)})
+      .then(() => {history.push("/streets")})
   }
 
   
@@ -56,7 +63,7 @@ function App() {
       <Router>
           <div>
               <Switch>
-              {isLoggedin ? (<Redirect to={{pathname: "/streets", state: loggedInDriver}}/>) : null}
+              {isLoggedin ? (<Route to={{pathname: "/streets", state: loggedInDriver}}/>) : null}
               <Route exact path={["/", "/login"]}>
                 <div className="jumbotron">
                   <h1 className="display-4">Hello, drivers!</h1>
@@ -76,9 +83,11 @@ function App() {
                 {document.getElementById("googleButton")}
               </Route>
 
-              <Route exact path="/streets">
+              <Route exact path="/streets" >
+                {console.log("hello")}
+                {console.log(loggedInDriver)}
                 <Nav />
-                <Streets driver={loggedInDriver}/>
+                <Streets driver={JSON.stringify(loggedInDriver)}/>
                 <br></br>
                 <div className="card">
                   <div className="card-body">
@@ -91,8 +100,7 @@ function App() {
                     {document.getElementById("googleButton")}
                   </div>
                 </div>
-                  
-                  
+        
               </Route>
               <Route exact path="/streets/:id">
                 <Nav />
