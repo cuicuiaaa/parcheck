@@ -24,6 +24,53 @@ db.Street.create({
   name: "Anzac Pde & Sturt St"
 })
 
+db.Street.create({
+  name: "Abercrombie Lane"
+})
+
+db.Street.create({
+  name: "Bathurst Street"
+})
+
+db.Street.create({
+  name: "Clement Ln"
+})
+
+db.Street.create({
+  name: "Darling Drive"
+})
+
+db.Street.create({
+  name: "Elizabeth Street"
+})
+
+db.ParkingLot.create({
+  locationId: 1,
+  occupied: true
+})
+  .then(({_id}) => db.Street.findOneAndUpdate({
+    name: "King St"
+  }, { $push: { parkingLots: _id } }))
+  .then(dbStreet => {
+    console.log(dbStreet);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+
+db.ParkingLot.create({
+  locationId: 2,
+  occupied: true
+})
+.then(({_id}) => db.Street.findOneAndUpdate({
+  name: "King St"
+}, { $push: { parkingLots: _id } }))
+.then(dbStreet => {
+  console.log(dbStreet);
+})
+.catch(err => {
+  console.log(err);
+});
 
 db.ParkingLot.create({
   locationId: 3,
@@ -58,7 +105,7 @@ db.ParkingLot.create({
   occupied: false
 })
   .then(({_id}) => db.Street.findOneAndUpdate({
-    name: "88-90 Houston Rd"
+    name: "Abercrombie Lane"
   }, { $push: { parkingLots: _id } }))
   .then(dbStreet => {
     console.log(dbStreet);
@@ -81,36 +128,6 @@ db.ParkingLot.create({
     console.log(err);
   });
 
-
-
-db.ParkingLot.create({
-  locationId: 1,
-  occupied: true
-})
-  .then(({_id}) => db.Street.findOneAndUpdate({
-    name: "King St"
-  }, { $push: { parkingLots: _id } }))
-  .then(dbStreet => {
-    console.log(dbStreet);
-  })
-  .catch(err => {
-    console.log(err);
-  });
-
-db.ParkingLot.create({
-  locationId: 2,
-  occupied: true
-})
-.then(({_id}) => db.Street.findOneAndUpdate({
-  name: "King St"
-}, { $push: { parkingLots: _id } }))
-.then(dbStreet => {
-  console.log(dbStreet);
-})
-.catch(err => {
-  console.log(err);
-});
-
 db.ParkingLot.create({
   locationId: 7,
   occupied: false
@@ -127,6 +144,230 @@ db.ParkingLot.create({
 
 db.ParkingLot.create({
   locationId: 8,
+  occupied: true
+})
+.then(({_id}) => db.Street.findOneAndUpdate({
+  name: "Abercrombie Lane"
+}, { $push: { parkingLots: _id } }))
+.then(dbStreet => {
+  console.log(dbStreet);
+})
+.catch(err => {
+  console.log(err);
+});
+
+db.ParkingLot.create({
+  locationId: 9,
+  occupied: true
+})
+  .then(({_id}) => db.Street.findOneAndUpdate({
+    name: "King St"
+  }, { $push: { parkingLots: _id } }))
+  .then(dbStreet => {
+    console.log(dbStreet);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+
+db.ParkingLot.create({
+  locationId: 10,
+  occupied: true
+})
+.then(({_id}) => db.Street.findOneAndUpdate({
+  name: "King St"
+}, { $push: { parkingLots: _id } }))
+.then(dbStreet => {
+  console.log(dbStreet);
+})
+.catch(err => {
+  console.log(err);
+});
+
+db.ParkingLot.create({
+  locationId: 11,
+  occupied: true
+})
+  .then(({_id}) => db.Street.findOneAndUpdate({
+    name: "88-90 Houston Rd"
+  }, { $push: { parkingLots: _id } }))
+  .then(dbStreet => {
+    console.log(dbStreet);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+
+db.ParkingLot.create({
+  locationId: 12,
+  occupied: false
+})
+  .then(({_id}) => db.Street.findOneAndUpdate({
+    name: "88-90 Houston Rd"
+  }, { $push: { parkingLots: _id } }))
+  .then(dbStreet => {
+    console.log(dbStreet);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+
+db.ParkingLot.create({
+  locationId: 13,
+  occupied: false
+})
+  .then(({_id}) => db.Street.findOneAndUpdate({
+    name: "88-90 Houston Rd"
+  }, { $push: { parkingLots: _id } }))
+  .then(dbStreet => {
+    console.log(dbStreet);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+
+db.ParkingLot.create({
+  locationId: 14,
+  occupied: false
+})
+  .then(({_id}) => db.Street.findOneAndUpdate({
+    name: "88-90 Houston Rd"
+  }, { $push: { parkingLots: _id } }))
+  .then(dbStreet => {
+    console.log(dbStreet);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+
+db.ParkingLot.create({
+  locationId: 15,
+  occupied: false
+})
+.then(({_id}) => db.Street.findOneAndUpdate({
+  name: "King St"
+}, { $push: { parkingLots: _id } }))
+.then(dbStreet => {
+  console.log(dbStreet);
+})
+.catch(err => {
+  console.log(err);
+});
+
+db.ParkingLot.create({
+  locationId: 16,
+  occupied: true
+})
+.then(({_id}) => db.Street.findOneAndUpdate({
+  name: "Anzac Pde & Sturt St"
+}, { $push: { parkingLots: _id } }))
+.then(dbStreet => {
+  console.log(dbStreet);
+})
+.catch(err => {
+  console.log(err);
+});
+
+db.ParkingLot.create({
+  locationId: 17,
+  occupied: true
+})
+  .then(({_id}) => db.Street.findOneAndUpdate({
+    name: "Bathurst Street"
+  }, { $push: { parkingLots: _id } }))
+  .then(dbStreet => {
+    console.log(dbStreet);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+
+db.ParkingLot.create({
+  locationId: 18,
+  occupied: true
+})
+.then(({_id}) => db.Street.findOneAndUpdate({
+  name: "King St"
+}, { $push: { parkingLots: _id } }))
+.then(dbStreet => {
+  console.log(dbStreet);
+})
+.catch(err => {
+  console.log(err);
+});
+
+db.ParkingLot.create({
+  locationId: 19,
+  occupied: true
+})
+  .then(({_id}) => db.Street.findOneAndUpdate({
+    name: "88-90 Houston Rd"
+  }, { $push: { parkingLots: _id } }))
+  .then(dbStreet => {
+    console.log(dbStreet);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+
+db.ParkingLot.create({
+  locationId: 20,
+  occupied: false
+})
+  .then(({_id}) => db.Street.findOneAndUpdate({
+    name: "88-90 Houston Rd"
+  }, { $push: { parkingLots: _id } }))
+  .then(dbStreet => {
+    console.log(dbStreet);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+
+db.ParkingLot.create({
+  locationId: 21,
+  occupied: false
+})
+  .then(({_id}) => db.Street.findOneAndUpdate({
+    name: "Elizabeth Street"
+  }, { $push: { parkingLots: _id } }))
+  .then(dbStreet => {
+    console.log(dbStreet);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+
+db.ParkingLot.create({
+  locationId: 22,
+  occupied: false
+})
+  .then(({_id}) => db.Street.findOneAndUpdate({
+    name: "88-90 Houston Rd"
+  }, { $push: { parkingLots: _id } }))
+  .then(dbStreet => {
+    console.log(dbStreet);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+
+db.ParkingLot.create({
+  locationId: 23,
+  occupied: false
+})
+.then(({_id}) => db.Street.findOneAndUpdate({
+  name: "King St"
+}, { $push: { parkingLots: _id } }))
+.then(dbStreet => {
+  console.log(dbStreet);
+})
+.catch(err => {
+  console.log(err);
+});
+
+db.ParkingLot.create({
+  locationId: 24,
   occupied: true
 })
 .then(({_id}) => db.Street.findOneAndUpdate({
