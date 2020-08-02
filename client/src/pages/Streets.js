@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import Jumbotron from "../components/Jumbotron";
+
 import Search from "../components/Search/Search";
 
 import API from "../utils/API";
@@ -41,7 +41,14 @@ function Streets(props) {
 
   return (
     <div>
-      <Jumbotron driver={props.driver}/>
+      <div className="streets-greeting-container">
+        <div>
+          <p className="question">Where do you want to park? </p>
+          <p>Use the search box below to find the street.</p>
+        </div>
+        
+        <img src="transportation.png" alt="car" className="transportation"/>
+      </div>
       <Search onChange={onChange}/>
       <br></br>
       <List search={search} streets={streets}/>

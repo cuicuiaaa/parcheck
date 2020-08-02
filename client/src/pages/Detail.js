@@ -67,15 +67,20 @@ function Detail(props) {
           if (parkingLot.occupied == true && parkingLot.drivers[0] !== props.driver._id) {
             return (
             <div className="parking-lot-occupied">
-              <p>{`Location ID: ${parkingLot.locationId}`}</p>
-              <p>{"Occupied.."}</p>
+              <p className="lot-text">{`Location ID: ${parkingLot.locationId}`}</p>
+              <img src="/occupied.png" alt="occupied" className="occupied-img"/>
+              
+              
+              <p className="lot-text">{"Occupied.."}</p>
+              
             </div>
           )
           } else if (parkingLot.occupied == true && parkingLot.drivers[0] == props.driver._id) {
             return (
               <div className="parking-lot-occupied">
-                <p>{`Location ID: ${parkingLot.locationId}`}</p>
-                <button type="button" className="btn-success" onClick={() => leave(parkingLot._id)}>{"Leave."}</button>
+                <p className="lot-text">{`Location ID: ${parkingLot.locationId}`}</p>
+                <img src="/here.png" alt="here" className="here-img"/>
+                <button type="button" className="btn" onClick={() => leave(parkingLot._id)}>{"Leave."}</button>
               </div>
             )
           }
@@ -83,8 +88,9 @@ function Detail(props) {
           else {
             return (
             <div className="parking-lot-vacant">
-              <p>{`Location ID: ${parkingLot.locationId}`}</p>
-              <button type="button" className="btn-danger" onClick={() => onClick(parkingLot._id)}>{"Park!!"}</button>
+              <p className="lot-text">{`Location ID: ${parkingLot.locationId}`}</p>
+              <img src="/vacant.png" alt="vacant" className="vacant-img"/>
+              <button type="button" className="btn" onClick={() => onClick(parkingLot._id)}>{"Park!!"}</button>
             </div>
           ) 
           }

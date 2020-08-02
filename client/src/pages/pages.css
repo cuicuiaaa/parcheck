@@ -1,8 +1,3 @@
-.jumbotron {
-    background-color: #E5E5E5 !important; 
-    
-}
-
 .main-container {
     display: flex;
     flex-direction: column;
@@ -12,12 +7,14 @@
 .street-name {
     text-align: center;
     margin: 30px 0;
+    font-family: 'Varela Round', sans-serif
 }
 
 .parking-lot-container {
+    margin: 0 100px;
     background-color: #E5E5E5;
     display: flex !important;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly !important;
     color: #ffffff;
     
@@ -25,20 +22,64 @@
 }
 
 .parking-lot-occupied {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     background-color: #14213d;
     text-align: center;
     padding: 10px;
-    margin: 30px;
-    border-radius: 10%;
+    margin: 30px 100px;
+    border-radius: 30px;
     
 }
 
+.lot-text {
+    margin-top: 40px;
+}
+
 .parking-lot-vacant {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     background-color: #fca311;
     text-align: center;
     padding: 10px;
-    border-radius: 10%;
+    margin: 30px 100px;
+    border-radius: 30px;
+}
+
+.streets-greeting-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.question {
+    font-size: 50px;
+    margin-top: 200px;
+    padding-right: 50px;
+}
+
+.transportation {
+    margin-right: 30px;
+}
+
+.occupied-img {
+    height: 100px;
+}
+
+.vacant-img {
+    height: 100px;
+}
+
+.here-img {
+    height: 100px;
+}
+
+.btn {
+    font-family: 'Varela Round', sans-serif;
     margin: 30px;
+    background-color: #fff;
 }
 
 @media only screen and (max-width: 600px) {

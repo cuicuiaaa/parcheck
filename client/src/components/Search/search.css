@@ -1,11 +1,12 @@
 .search-header {
     text-align: center;
+    font-size: larger;
 
 }
 
 .search-box {
     width: fit-content;
-    margin: auto;
+    margin: 10px auto;
 }
 
 .form-control:focus {

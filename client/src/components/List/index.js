@@ -21,7 +21,7 @@ export function List(props) {
             
             <li className="list-group-item d-flex justify-content-between align-items-center">
               {street.name}
-              <span className="badge badge-primary">
+              <span className="badge">
                 <a href={"/streets/" + street._id}>View Vacancies</a>
               </span>
             </li>

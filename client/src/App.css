@@ -1,6 +1,46 @@
-.login-container {
-    background-color: red;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+body {
+    font-family: 'Varela Round', sans-serif !important;
+}
+
+.login-nav {
+    
+    font-size: 30px;
+    padding: 20px;
+}
+
+.nav-text {
+    color: black !important;
+}
+
+.greeting {
+    padding: 50px 100px 10px;
+    font-size: 100px;
+    font-family: 'Varela Round', sans-serif;
+
+}
+
+.instruction {
+    padding-left: 100px;
+}
+
+.google-login {
+    margin:0 100px 50px !important;
+}
+
+.login-img {
+    width: 100%;
+}
+
+.logout-container {
+    padding-left: 50px;
+}
+
+.logout-instruction {
+    margin-bottom: 20px;
+    font-family: 'Varela Round', sans-serif
+}
+
+.logout-button {
+    margin-bottom: 50px !important;
+
 }
