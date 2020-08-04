@@ -44,7 +44,7 @@ function Streets(props) {
       <div className="streets-greeting-container">
         <div>
           <p className="question">Where do you want to park? </p>
-          <p>Use the search box below to find the street.</p>
+          <p className="search-instruction">Use the search box below to find the street.</p>
         </div>
         
         <img src="transportation.png" alt="car" className="transportation"/>

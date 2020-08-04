@@ -112,7 +112,7 @@ function App(props) {
               </Route>
               <Route exact path="/streets/:id">
                 <nav className="login-nav">
-                <Link to="/streets" >
+                <Link className="nav-text" to="/streets" >
                   ParCheck
                 </Link>
                 </nav>

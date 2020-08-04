@@ -9,39 +9,35 @@ mongoose.connect(
 const date = new Date().getTime();
 
 db.Street.create({
-  name: "88-90 Houston Rd"
+  name: "88-90 Houston Rd - Kingsford"
 })
 
 db.Street.create({
-  name: "King St"
+  name: "King St - Sydney"
 })
 
 db.Street.create({
-  name: "13 Rainbow St"
+  name: "Anzac Pde & Sturt St - Kingsford"
 })
 
 db.Street.create({
-  name: "Anzac Pde & Sturt St"
+  name: "Abercrombie Lane - Sydney"
 })
 
 db.Street.create({
-  name: "Abercrombie Lane"
+  name: "Bathurst Street - Sydney"
 })
 
 db.Street.create({
-  name: "Bathurst Street"
+  name: "Clement Ln - Sydney"
 })
 
 db.Street.create({
-  name: "Clement Ln"
+  name: "Darling Drive - Sydney"
 })
 
 db.Street.create({
-  name: "Darling Drive"
-})
-
-db.Street.create({
-  name: "Elizabeth Street"
+  name: "Elizabeth Street - Sydney"
 })
 
 db.ParkingLot.create({
@@ -49,7 +45,7 @@ db.ParkingLot.create({
   occupied: true
 })
   .then(({_id}) => db.Street.findOneAndUpdate({
-    name: "King St"
+    name: "Elizabeth Street - Sydney"
   }, { $push: { parkingLots: _id } }))
   .then(dbStreet => {
     console.log(dbStreet);
@@ -63,7 +59,7 @@ db.ParkingLot.create({
   occupied: true
 })
 .then(({_id}) => db.Street.findOneAndUpdate({
-  name: "King St"
+  name: "Elizabeth Street - Sydney"
 }, { $push: { parkingLots: _id } }))
 .then(dbStreet => {
   console.log(dbStreet);
@@ -77,7 +73,7 @@ db.ParkingLot.create({
   occupied: true
 })
   .then(({_id}) => db.Street.findOneAndUpdate({
-    name: "88-90 Houston Rd"
+    name: "88-90 Houston Rd - Kingsford"
   }, { $push: { parkingLots: _id } }))
   .then(dbStreet => {
     console.log(dbStreet);
@@ -91,7 +87,7 @@ db.ParkingLot.create({
   occupied: false
 })
   .then(({_id}) => db.Street.findOneAndUpdate({
-    name: "88-90 Houston Rd"
+    name: "88-90 Houston Rd - Kingsford"
   }, { $push: { parkingLots: _id } }))
   .then(dbStreet => {
     console.log(dbStreet);
@@ -105,7 +101,7 @@ db.ParkingLot.create({
   occupied: false
 })
   .then(({_id}) => db.Street.findOneAndUpdate({
-    name: "Abercrombie Lane"
+    name: "Abercrombie Lane - Sydney"
   }, { $push: { parkingLots: _id } }))
   .then(dbStreet => {
     console.log(dbStreet);
@@ -119,7 +115,7 @@ db.ParkingLot.create({
   occupied: false
 })
   .then(({_id}) => db.Street.findOneAndUpdate({
-    name: "88-90 Houston Rd"
+    name: "88-90 Houston Rd - Kingsford"
   }, { $push: { parkingLots: _id } }))
   .then(dbStreet => {
     console.log(dbStreet);
@@ -133,7 +129,7 @@ db.ParkingLot.create({
   occupied: false
 })
 .then(({_id}) => db.Street.findOneAndUpdate({
-  name: "King St"
+  name: "Elizabeth Street - Sydney"
 }, { $push: { parkingLots: _id } }))
 .then(dbStreet => {
   console.log(dbStreet);
@@ -147,7 +143,7 @@ db.ParkingLot.create({
   occupied: true
 })
 .then(({_id}) => db.Street.findOneAndUpdate({
-  name: "Abercrombie Lane"
+  name: "Abercrombie Lane - Sydney"
 }, { $push: { parkingLots: _id } }))
 .then(dbStreet => {
   console.log(dbStreet);
@@ -161,7 +157,7 @@ db.ParkingLot.create({
   occupied: true
 })
   .then(({_id}) => db.Street.findOneAndUpdate({
-    name: "King St"
+    name: "Elizabeth Street - Sydney"
   }, { $push: { parkingLots: _id } }))
   .then(dbStreet => {
     console.log(dbStreet);
@@ -175,7 +171,7 @@ db.ParkingLot.create({
   occupied: true
 })
 .then(({_id}) => db.Street.findOneAndUpdate({
-  name: "King St"
+  name: "Elizabeth Street - Sydney"
 }, { $push: { parkingLots: _id } }))
 .then(dbStreet => {
   console.log(dbStreet);
@@ -189,7 +185,7 @@ db.ParkingLot.create({
   occupied: true
 })
   .then(({_id}) => db.Street.findOneAndUpdate({
-    name: "88-90 Houston Rd"
+    name: "88-90 Houston Rd - Kingsford"
   }, { $push: { parkingLots: _id } }))
   .then(dbStreet => {
     console.log(dbStreet);
@@ -203,7 +199,7 @@ db.ParkingLot.create({
   occupied: false
 })
   .then(({_id}) => db.Street.findOneAndUpdate({
-    name: "88-90 Houston Rd"
+    name: "88-90 Houston Rd - Kingsford"
   }, { $push: { parkingLots: _id } }))
   .then(dbStreet => {
     console.log(dbStreet);
@@ -217,7 +213,7 @@ db.ParkingLot.create({
   occupied: false
 })
   .then(({_id}) => db.Street.findOneAndUpdate({
-    name: "88-90 Houston Rd"
+    name: "88-90 Houston Rd - Kingsford"
   }, { $push: { parkingLots: _id } }))
   .then(dbStreet => {
     console.log(dbStreet);
@@ -231,7 +227,7 @@ db.ParkingLot.create({
   occupied: false
 })
   .then(({_id}) => db.Street.findOneAndUpdate({
-    name: "88-90 Houston Rd"
+    name: "88-90 Houston Rd - Kingsford"
   }, { $push: { parkingLots: _id } }))
   .then(dbStreet => {
     console.log(dbStreet);
@@ -245,7 +241,7 @@ db.ParkingLot.create({
   occupied: false
 })
 .then(({_id}) => db.Street.findOneAndUpdate({
-  name: "King St"
+  name: "Elizabeth Street - Sydney"
 }, { $push: { parkingLots: _id } }))
 .then(dbStreet => {
   console.log(dbStreet);
@@ -259,7 +255,7 @@ db.ParkingLot.create({
   occupied: true
 })
 .then(({_id}) => db.Street.findOneAndUpdate({
-  name: "Anzac Pde & Sturt St"
+  name: "Anzac Pde & Sturt St - Kingsford"
 }, { $push: { parkingLots: _id } }))
 .then(dbStreet => {
   console.log(dbStreet);
@@ -273,7 +269,7 @@ db.ParkingLot.create({
   occupied: true
 })
   .then(({_id}) => db.Street.findOneAndUpdate({
-    name: "Bathurst Street"
+    name: "Bathurst Street - Sydney"
   }, { $push: { parkingLots: _id } }))
   .then(dbStreet => {
     console.log(dbStreet);
@@ -287,7 +283,7 @@ db.ParkingLot.create({
   occupied: true
 })
 .then(({_id}) => db.Street.findOneAndUpdate({
-  name: "King St"
+  name: "Elizabeth Street - Sydney"
 }, { $push: { parkingLots: _id } }))
 .then(dbStreet => {
   console.log(dbStreet);
@@ -301,7 +297,7 @@ db.ParkingLot.create({
   occupied: true
 })
   .then(({_id}) => db.Street.findOneAndUpdate({
-    name: "88-90 Houston Rd"
+    name: "88-90 Houston Rd - Kingsford"
   }, { $push: { parkingLots: _id } }))
   .then(dbStreet => {
     console.log(dbStreet);
@@ -315,7 +311,7 @@ db.ParkingLot.create({
   occupied: false
 })
   .then(({_id}) => db.Street.findOneAndUpdate({
-    name: "88-90 Houston Rd"
+    name: "88-90 Houston Rd - Kingsford"
   }, { $push: { parkingLots: _id } }))
   .then(dbStreet => {
     console.log(dbStreet);
@@ -329,7 +325,7 @@ db.ParkingLot.create({
   occupied: false
 })
   .then(({_id}) => db.Street.findOneAndUpdate({
-    name: "Elizabeth Street"
+    name: "Elizabeth Street - Sydney"
   }, { $push: { parkingLots: _id } }))
   .then(dbStreet => {
     console.log(dbStreet);
@@ -343,7 +339,7 @@ db.ParkingLot.create({
   occupied: false
 })
   .then(({_id}) => db.Street.findOneAndUpdate({
-    name: "88-90 Houston Rd"
+    name: "88-90 Houston Rd - Kingsford"
   }, { $push: { parkingLots: _id } }))
   .then(dbStreet => {
     console.log(dbStreet);
@@ -357,7 +353,7 @@ db.ParkingLot.create({
   occupied: false
 })
 .then(({_id}) => db.Street.findOneAndUpdate({
-  name: "King St"
+  name: "King St - Sydney"
 }, { $push: { parkingLots: _id } }))
 .then(dbStreet => {
   console.log(dbStreet);
@@ -371,8 +367,8 @@ db.ParkingLot.create({
   occupied: true
 })
 .then(({_id}) => db.Street.findOneAndUpdate({
-  name: "Anzac Pde & Sturt St"
-}, { $push: { parkingLots: _id } }))
+  name: "Anzac Pde & Sturt St - Kingsford"
+}, { $push: { parkingLots: _id  } }))
 .then(dbStreet => {
   console.log(dbStreet);
 })

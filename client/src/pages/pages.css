@@ -85,6 +85,47 @@
 @media only screen and (max-width: 600px) {
     .parking-lot-container {
         flex-direction: column;
+        margin: 0;
+    }
+
+    .transportation {
+        display: none;
+    }
+
+    .question {
+        font-size: 50px;
+        margin-top: 20px;
+        padding-left: 20px;
+    }
+
+    .search-instruction {
+        padding-left: 20px;
+    }
+
+    .occupied-img {
+        display: none;
+    }
+    
+    .vacant-img {
+        display: none;
+    }
+    
+    .here-img {
+        display: none;
+    }
+
+    .parking-lot-occupied {
+        margin: 30px 10px;
+        padding: 10px;
+    }
+
+    .parking-lot-vacant {
+        margin: 30px 10px;
+        padding: 10px;
+    }
+
+    .lot-text {
+        margin-top: 35px;
     }
 }
 
